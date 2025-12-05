@@ -1,103 +1,225 @@
-# ⚖️ JuryX — Blockchain Powered Hackathon Management System
+<div align="center">
 
-[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen?style=for-the-badge&logo=vercel)](https://juryx.abhaybansal.in/)
-[![GitHub Repo](https://img.shields.io/badge/GitHub-Repository-blue?style=for-the-badge&logo=github)](https://github.com/Targter/JURYX-BLOCKCHAIN.git)
-[![License](https://img.shields.io/badge/License-MIT-orange?style=for-the-badge)](LICENSE)
+```ascii
+     ██╗██╗   ██╗██████╗ ██╗   ██╗██╗  ██╗
+     ██║██║   ██║██╔══██╗╚██╗ ██╔╝╚██╗██╔╝
+     ██║██║   ██║██████╔╝ ╚████╔╝  ╚███╔╝ 
+██   ██║██║   ██║██╔══██╗  ╚██╔╝   ██╔██╗ 
+╚█████╔╝╚██████╔╝██║  ██║   ██║   ██╔╝ ██╗
+ ╚════╝  ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝
+```
 
-> **Decentralized. Transparent. Immutable.**
-> JuryX is a blockchain-powered judging and voting platform built to eliminate bias, ensuring 100% fair and verifiable results for hackathons and competitions.
+### **Decentralized Hackathon Judging • Zero Bias • 100% Verifiable**
 
----
-
-## 🚀 Overview
-
-Traditional judging systems are plagued by **bias, manual errors, and a lack of transparency**. Participants rarely know how they were scored, and organizers often struggle with spreadsheet chaos.
-
-**JuryX solves this.** By leveraging **Smart Contracts (Solidity)** for scoring and a modern **Next.js** frontend for interaction, JuryX ensures that once a score is locked, it cannot be altered—not even by the organizers.
-
-### 🌟 Core Philosophy
-1.  **Decentralization:** No central authority can manipulate the results.
-2.  **Transparency:** All scoring logic is verifiable on-chain.
-3.  **Privacy:** Judges cannot influence one another; scores are revealed only after the round closes.
+[🌐 Live Platform](https://GT-juryx.vercel.app/) • [📦 Repository](https://github.com/2405Gaurav/GT-juryx.git) • [📄 License: MIT](LICENSE)
 
 ---
 
-## 🛠️ Tech Stack
+**⚡ The Problem:** Hackathon judging is broken. Bias creeps in. Manual scoring fails. Results get questioned.
 
-JuryX utilizes a robust **Hybrid Web3 Architecture**:
+**✨ The Solution:** Blockchain-enforced fairness. Every score is immutable. Every result is transparent.
 
-### **Blockchain Layer**
--   **Solidity:** Smart contracts for immutable scoring and result calculation.
--   **Ethereum / Polygon:** Deployed network for transaction handling.
--   **Hardhat:** Development environment for compiling and deploying contracts.
-
-### **Frontend & Interface**
--   **Next.js (React):** High-performance, server-side rendered UI.
--   **Tailwind CSS:** Professional, dark-mode-first styling.
--   **Framer Motion:** Smooth animations for modals and transitions.
--   **WebContainers:** Allowing live code previews of participant projects directly in the browser.
-
-### **Backend & Infrastructure**
--   **Node.js / Express:** Handling auth, team management, and API routing.
--   **IPFS / Web3.Storage:** Decentralized storage for project assets.
--   **Vercel:** CI/CD and deployment.
+</div>
 
 ---
 
-## 🔥 Key Features
+## 🎯 What Makes JuryX Different
 
-### 🏛️ Blockchain-Based Scoring
-Every score submitted by a judge is signed and stored on the blockchain. This creates an **immutable audit trail** that guarantees the winner is chosen purely on merit.
+<table>
+<tr>
+<td width="50%">
 
-### 🔐 Secure Judge Panels
-Judges receive unique access codes. They can evaluate projects using a weighted metric system. The UI ensures a smooth experience without needing deep crypto knowledge.
+**🔒 IMMUTABLE SCORING**
 
-### ⚡ Real-Time Live Leaderboard
-As soon as the smart contract computes the final votes, the leaderboard updates instantly. No waiting, no manual tallying.
+Smart contracts lock in every judge's decision permanently. No backdoors. No alterations. Not even organizers can change submitted scores.
 
-### 📁 Live Project Previews
-Integrated **WebContainers** allow judges to run and preview participant projects (Next.js/React apps) directly within JuryX, without downloading ZIP files.
+</td>
+<td width="50%">
 
-### 🎛️ Organizer Control Center
-A comprehensive dashboard to:
-- Create events and rounds.
-- Generate secret entry codes.
-- Assign panelists and manage permissions.
+**👁️ RADICAL TRANSPARENCY**
 
----
+Every scoring metric lives on-chain. Participants can verify exactly how they were evaluated. Trust through code, not promises.
 
-## 📸 Screen Previews
+</td>
+</tr>
+<tr>
+<td width="50%">
 
-*(Add screenshots of your Dashboard, Landing Page, and Voting Screen here)*
+**🎭 BIAS ELIMINATION**
 
-| Landing Page | Judge Dashboard |
-| :---: | :---: |
-| ![Landing](https://github.com/Targter/JURYX-BLOCKCHAIN/blob/e3a98d00b3a7052a05e4639f5694f05cde666aca/public/LANDING_PAGE.jpg) | ![Dashboard](https://github.com/Targter/JURYX-BLOCKCHAIN/blob/a6f83192acf0364f195869e8ae55aa22cfb809b0/public/JUDGE_DASHBOARD.png) |
+Judges score independently with zero visibility into others' evaluations until the round closes. Pure merit wins.
 
----
+</td>
+<td width="50%">
 
-## 🧭 How It Works (Flow)
+**⚡ INSTANT FINALITY**
 
-1.  **Organizer** creates an event and deploys a specific Smart Contract for the round.
-2.  **Participants** register via wallet, form teams, and upload project repos/files.
-3.  **Judges** access the panel, view projects, and sign transactions to submit scores.
-4.  **Smart Contract** aggregates scores based on pre-defined weights.
-5.  **JuryX** displays the final, unalterable winner on the public leaderboard.
+Smart contracts calculate winners automatically. No spreadsheets. No delays. Results go live the moment judging ends.
+
+</td>
+</tr>
+</table>
 
 ---
 
-## 💻 Getting Started
+## 🏗️ Architecture Blueprint
 
-Follow these steps to set up JuryX locally for development.
+```mermaid
+graph LR
+    A[Organizer] -->|Deploys| B[Smart Contract]
+    C[Participants] -->|Register| B
+    D[Judges] -->|Submit Scores| B
+    B -->|Calculates| E[Immutable Results]
+    E -->|Displays| F[Public Leaderboard]
+```
 
-### Prerequisites
-- Node.js (v18+)
-- Metamask (or any Web3 wallet)
-- Git
+**Blockchain Core**
+```
+Solidity Contracts → Ethereum/Polygon → Hardhat Toolkit
+```
 
-### Installation
+**Frontend Experience**
+```
+Next.js + React → Tailwind CSS → Framer Motion → WebContainers
+```
 
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/Targter/JURYX-BLOCKCHAIN.git
-   cd JURYX-BLOCKCHAIN
+**Backend Operations**
+```
+Node.js/Express → IPFS Storage → Vercel Deployment
+```
+
+---
+
+## 💎 Feature Showcase
+
+### Judge Panel Experience
+```
+✓ Unique access codes per judge
+✓ Weighted scoring metrics (customizable)
+✓ Live project preview with WebContainers
+✓ No crypto knowledge required
+✓ Transaction signing made simple
+```
+
+### Organizer Control Center
+```
+✓ Event creation & round management
+✓ Secret entry code generation
+✓ Panelist assignment dashboard
+✓ Real-time monitoring
+✓ Permission management
+```
+
+### Participant Journey
+```
+✓ Wallet-based registration
+✓ Team formation tools
+✓ Repository linking (GitHub/GitLab)
+✓ Project upload to IPFS
+✓ Live leaderboard tracking
+```
+
+---
+
+## 📊 Visual Gallery
+
+<div align="center">
+
+### Landing Experience
+![Landing Page](https://github.com/Targter/JURYX-BLOCKCHAIN/blob/e3a98d00b3a7052a05e4639f5694f05cde666aca/public/LANDING_PAGE.jpg)
+
+### Judge Interface
+![Judge Dashboard](https://github.com/2405Gaurav/GT=juryx/blob/a6f83192acf0364f195869e8ae55aa22cfb809b0/public/JUDGE_DASHBOARD.png)
+
+</div>
+
+---
+
+## 🔄 The JuryX Workflow
+
+```
+STEP 1 → Organizer deploys event smart contract
+         ↓
+STEP 2 → Participants register with Web3 wallet
+         ↓
+STEP 3 → Teams form and upload project materials
+         ↓
+STEP 4 → Judges receive access codes
+         ↓
+STEP 5 → Independent scoring via signed transactions
+         ↓
+STEP 6 → Smart contract aggregates all scores
+         ↓
+STEP 7 → Winner announced on immutable leaderboard
+```
+
+---
+
+## 🚀 Quick Start Guide
+
+**System Requirements**
+- Node.js v18 or higher
+- MetaMask or compatible Web3 wallet
+- Git installed
+
+**Launch Commands**
+
+```bash
+# Clone the repository
+git clone https://github.com/Targter/JURYX-BLOCKCHAIN.git
+
+# Navigate to project
+cd JURYX-BLOCKCHAIN
+
+# Install dependencies
+npm install
+
+# Configure environment
+cp .env.example .env.local
+
+# Start development server
+npm run dev
+```
+
+Access the platform at `http://localhost:3000`
+
+---
+
+## 🌐 Technology Stack
+
+| Layer | Technologies |
+|-------|-------------|
+| **Smart Contracts** | Solidity, Hardhat, Ethereum/Polygon |
+| **Frontend** | Next.js 14, React 18, TypeScript |
+| **Styling** | Tailwind CSS, Framer Motion |
+| **Backend** | Node.js, Express API |
+| **Storage** | IPFS, Web3.Storage |
+| **Deployment** | Vercel, Infura |
+| **Dev Tools** | WebContainers, ESLint, Prettier |
+
+---
+
+## 🎪 Core Principles
+
+> **Decentralization First**
+> No single point of failure. No central authority can manipulate outcomes.
+
+> **Code is Law**
+> Smart contracts enforce rules automatically. Human bias eliminated.
+
+> **Privacy in Judging**
+> Judges operate independently until round closure ensures uninfluenced decisions.
+
+---
+
+## 📜 License & Contributions
+
+Released under the **MIT License** • Open for contributions • Built for the Web3 community
+
+<div align="center">
+
+**Made with ⚡ by developers who believe in fair competition**
+
+[![Star this repo](https://img.shields.io/github/stars/Targter/JURYX-BLOCKCHAIN?style=social)](https://github.com/Targter/JURYX-BLOCKCHAIN)
+
+</div>
